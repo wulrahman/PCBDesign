@@ -1,11 +1,33 @@
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  #pcb-design {
-    width: 100vw;
-    height: 100vh;
-  }
-  
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#pcb-design {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#container { 
+  display: flex;
+  align-items: flex-start;
+}
+
+#editor {
+    width: 300px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    font-family: monospace;
+}
+
+#pcb-container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 20px;
+    position: relative;
+}
