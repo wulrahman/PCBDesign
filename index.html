@@ -8,32 +8,126 @@
 </head>
 <body>
     <div id="container">
-        <textarea id="editor" placeholder="Enter commands here">  // Example PCB Layout
-            // Define components and their positions
-        
-            add(type="roundpad", x="105", y="155", outerRadius="15", innerRadius="5") // Round pad
-            add(type="outline", x="90", y="140", width="30", height="30") // Outline for round pad
-            add(type="label", x="95", y="130", text="Round Pad") // Label for round pad
-        
-            add(type="squarepad", x="250", y="150", width="20", height="20") // Square pad
-            add(type="outline", x="235", y="135", width="40", height="40") // Outline for square pad
-            add(type="label", x="240", y="120", text="Square Pad") // Label for square pad
-        
-            add(type="squarepad", x="400", y="300", width="20", height="20") // Another square pad
-            add(type="outline", x="385", y="285", width="40", height="40") // Outline for another square pad
-            add(type="label", x="390", y="270", text="Another Pad") // Label for another square pad
-        
-            add(type="squarepad", x="200", y="400", width="20", height="20") // Square pad
-            add(type="outline", x="185", y="385", width="40", height="40") // Outline for square pad
-            add(type="label", x="190", y="370", text="Square Pad") // Label for square pad
-        
-            add(type="squarepad", x="500", y="400", width="20", height="20") // Square pad
-            add(type="outline", x="485", y="385", width="40", height="40") // Outline for square pad
-            add(type="label", x="490", y="370", text="Square Pad") // Label for square pad
-        
-            // Add connections between components if needed
-            connect(component1=0, component2=4) // Connect first two components
-            connect(component1=4, component2=10) // Connect third and fourth components</textarea>
+        <textarea id="editor" placeholder="Enter commands here"> 
+            <pcbLayout>
+                <!-- Define components and their positions -->
+                <command type="add">
+                    <attribute key="type" value="roundpad" />
+                    <attribute key="x" value="105" />
+                    <attribute key="y" value="155" />
+                    <attribute key="outerRadius" value="15" />
+                    <attribute key="innerRadius" value="5" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="outline" />
+                    <attribute key="x" value="90" />
+                    <attribute key="y" value="140" />
+                    <attribute key="width" value="30" />
+                    <attribute key="height" value="30" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="label" />
+                    <attribute key="x" value="95" />
+                    <attribute key="y" value="130" />
+                    <attribute key="text" value="Round Pad" />
+                </command>
+            
+                <command type="add">
+                    <attribute key="type" value="squarepad" />
+                    <attribute key="x" value="250" />
+                    <attribute key="y" value="150" />
+                    <attribute key="width" value="20" />
+                    <attribute key="height" value="20" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="outline" />
+                    <attribute key="x" value="235" />
+                    <attribute key="y" value="135" />
+                    <attribute key="width" value="40" />
+                    <attribute key="height" value="40" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="label" />
+                    <attribute key="x" value="240" />
+                    <attribute key="y" value="120" />
+                    <attribute key="text" value="Square Pad" />
+                </command>
+            
+                <command type="add">
+                    <attribute key="type" value="squarepad" />
+                    <attribute key="x" value="400" />
+                    <attribute key="y" value="300" />
+                    <attribute key="width" value="20" />
+                    <attribute key="height" value="20" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="outline" />
+                    <attribute key="x" value="385" />
+                    <attribute key="y" value="285" />
+                    <attribute key="width" value="40" />
+                    <attribute key="height" value="40" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="label" />
+                    <attribute key="x" value="390" />
+                    <attribute key="y" value="270" />
+                    <attribute key="text" value="Another Pad" />
+                </command>
+            
+                <command type="add">
+                    <attribute key="type" value="squarepad" />
+                    <attribute key="x" value="200" />
+                    <attribute key="y" value="400" />
+                    <attribute key="width" value="20" />
+                    <attribute key="height" value="20" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="outline" />
+                    <attribute key="x" value="185" />
+                    <attribute key="y" value="385" />
+                    <attribute key="width" value="40" />
+                    <attribute key="height" value="40" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="label" />
+                    <attribute key="x" value="190" />
+                    <attribute key="y" value="370" />
+                    <attribute key="text" value="Square Pad" />
+                </command>
+            
+                <command type="add">
+                    <attribute key="type" value="squarepad" />
+                    <attribute key="x" value="500" />
+                    <attribute key="y" value="400" />
+                    <attribute key="width" value="20" />
+                    <attribute key="height" value="20" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="outline" />
+                    <attribute key="x" value="485" />
+                    <attribute key="y" value="385" />
+                    <attribute key="width" value="40" />
+                    <attribute key="height" value="40" />
+                </command>
+                <command type="add">
+                    <attribute key="type" value="label" />
+                    <attribute key="x" value="490" />
+                    <attribute key="y" value="370" />
+                    <attribute key="text" value="Square Pad" />
+                </command>
+            
+                <!-- Add connections between components if needed -->
+                <command type="connect">
+                    <attribute key="component1" value="0" />
+                    <attribute key="component2" value="4" />
+                </command>
+                <command type="connect">
+                    <attribute key="component1" value="4" />
+                    <attribute key="component2" value="10" />
+                </command>
+            </pcbLayout>
+            
+        </textarea>
         <div id="pcb-container"></div>
         <button id="auto-route-btn">Auto Route</button> <!-- Button to trigger auto-routing -->
 
